@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "SPTheoNXB";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h1 style="text-align:center">SÁCH THEO NHÀ XUẤT BẢN</h1>
+
+@foreach (var sach in Model)
+{
+<div class="templatemo_product_box" style="margin-bottom:10px; margin-right:10px">
+
+    <h1>@sach.Tensach  </h1>
+    <a href="@Url.Action("Details","BookStore",new { id= sach.Masach})">
+        <img alt="@sach.Tensach" src="../../Hinhsanpham/@sach.Hinhminhhoa" width="150" height="200" />
+        <div class="product_info">
+
+            <h3>@sach.Dongia</h3>
+            <button type="button" class="btn btn-primary">Mua</button>
+            <button type="button" class="btn btn-primary">Chi tiết</button>
+        </div>
+
+        <div class="cleaner">&nbsp;</div>
+</div>
+
+
+}

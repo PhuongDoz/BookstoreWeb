@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h1 style="text-align:center">THÔNG TIN CHI TIẾT SÁCH</h1>
+
+
+<div>
+    <div style="width:40%; float:left;border-left:dotted 1px;border-color:azure">
+        <img src="~/Hinhsanpham/@Model.Hinhminhhoa" width="80%" />
+    </div>
+    <div style="width:60%;float:left;padding:10px">
+        <h4 style="font-weight:bold; color:red">Tên sách: @Model.Tensach</h4>
+        <p style="text-align:justify"> <span style="font-weight:bold">Mô tả: </span>@Model.Mota</p>
+        <p style="font-weight:bold">Giá bán: <span style="color:red">@Model.Dongia VNĐ</span></p>
+    </div>
+    <div id="Datmua">
+       
+        <button class="btn btn-success" onclick="location.href=' @Url.Action("ThemGiohang", "GioHang", new { @iMasach = Model.Masach, @strURL = Request.Url.ToString() })' "> ĐẶT MUA</a>
+
+    </div>
+
+</div>
